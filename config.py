@@ -21,9 +21,9 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'auto-filter-bot-v3')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ['9816378'])
+API_HASH = environ['6754e1c7f0e9b9e0246fa6c3e4eb25c9']
+BOT_TOKEN = environ['5766481859:AAEUXdzfhFYNeUAveRFdCeL5ffW5H89VE9I']
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -35,7 +35,7 @@ DB_URL = os.environ.get("DATABASE_URI", "")
 BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST", True))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['ADMINS'].split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['1112894936'].split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['CHANNELS'].split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -45,9 +45,9 @@ AUTH_GROUPS = [int(admin) for admin in environ.get("AUTH_GROUPS", "").split()]
 DEV_CHANNEL = "https://t.me/ZauteKm"
 
 # MongoDB information
-DATABASE_URI = environ['DATABASE_URI']
-DATABASE_NAME = environ['DATABASE_NAME']
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+DATABASE_URI = environ['mongodb+srv://Moviebot:<12M@y2002>@cluster0.4nt8qpt.mongodb.net/?retryWrites=true&w=majority']
+DATABASE_NAME = environ['moviebot']
+COLLECTION_NAME = environ.get('channel_file', 'Telegram_files')
 
 # Messages
 default_start_msg = """
